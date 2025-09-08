@@ -95,7 +95,7 @@ public class SessionController {
 //	            MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
 //	            String htmlContent = loadEmailTemplate("templates/welcomemail.jsp");
 //	            helper.setTo(user.getEmail());
-//	            helper.setFrom("vedantmshah206@gmail.com");
+//	            helper.setFrom("uremail@gmail.com");
 //	            helper.setText(htmlContent, true);
 //	            helper.setSubject("Welcome to What's Inside");
 //	            mailSender.send(message);
@@ -142,7 +142,7 @@ public class SessionController {
 
                 String htmlContent = loadEmailTemplate("templates/welcomemail.jsp"); // Should ideally be HTML
                 helper.setTo(user.getEmail());
-                helper.setFrom("vedantmshah206@gmail.com");
+                helper.setFrom("uremail@gmail.com");
                 helper.setText(htmlContent, true);
                 helper.setSubject("Welcome to What's Inside");
 
