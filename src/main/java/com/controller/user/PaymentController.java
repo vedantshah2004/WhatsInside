@@ -29,7 +29,7 @@ public class PaymentController {
 		System.out.println(paymentBean.getExpiryDate());
 		
 		
-		paymentservice.ChargeCreditCard("58BQf6HfYF","78X4u7wj7QQuq9x6",500D,paymentBean);
+		paymentservice.ChargeCreditCard("yourid","yourid",yourid,paymentBean);
 		return "Homepay";
 		
 	}
