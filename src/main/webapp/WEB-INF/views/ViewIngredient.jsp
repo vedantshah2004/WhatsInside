@@ -6,8 +6,6 @@
   IngredentsBean ingredent = (IngredentsBean) request.getAttribute("ingredent");
 %>
 
-
-
 <!-- Begin Page Content -->
 <div id="wrapper">
 	<jsp:include page="AdminSidebar.jsp"></jsp:include>

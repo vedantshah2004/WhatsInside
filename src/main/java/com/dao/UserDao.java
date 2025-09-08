@@ -24,11 +24,17 @@ public class UserDao {
 		// return type no return type
 		// argument type user bean
 		public void addUser(UserBean user) {
-			
-			stmt.update("insert into users(firstname,lastname,gender,email,password) VALUES (?,?,?,?,?)",
-			user.getFirstname(),user.getLastname(),user.getGender(),user.getEmail(),user.getPassword());
-			
+		    stmt.update(
+		        "INSERT INTO users (firstname, lastname, gender, email, password, role) VALUES (?, ?, ?, ?, ?, ?)",
+		        user.getFirstname(),
+		        user.getLastname(),
+		        user.getGender(),
+		        user.getEmail(),
+		        user.getPassword(),
+		        user.getRole() 
+		    );
 		}
+
 			
 		//select * from users
 		public List<UserBean> getAllUsers()

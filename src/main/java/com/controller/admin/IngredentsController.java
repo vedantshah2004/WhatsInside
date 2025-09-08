@@ -73,6 +73,31 @@ public class IngredentsController {
 	
 	
 	
+	@GetMapping("updateingredients")
+	public String updateIngredForm(Integer ingredientId, Model model) {
+	    IngredentsBean ib = stmt.queryForObject(
+	        "SELECT * FROM ingredients WHERE ingredientId=?",
+	        new BeanPropertyRowMapper<>(IngredentsBean.class),
+	        ingredientId
+	    );
+	    model.addAttribute("ingredent", ib);
+	    return "UpdateIngredient"; // This is the JSP page name
+	}
+
+	
+	@PostMapping("updateingredientdata")
+	public String updateIngredient(@Validated IngredentsBean ibean, BindingResult result) {
+	    String updateQuery = "UPDATE ingredients SET name=?, scientificName=?, commonUsage=?, avoidBy=?, fda=?, fssai=?, efsa=? WHERE ingredientId=?";
+	    stmt.update(updateQuery,
+	        ibean.getName(), ibean.getScientificName(), ibean.getCommonUsage(),
+	        ibean.getAvoidBy(), ibean.getFda(), ibean.getFssai(), ibean.getEfsa(),
+	        ibean.getIngredientId()
+	    );
+	    return "redirect:/listingredients";
+	}
+
+	
+	
 	@GetMapping("searchingredient")
 	public String searchingred(Model model)
 	{

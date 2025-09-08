@@ -78,7 +78,7 @@
         <a href="viewingredients?ingredientId=<%= ibean.getIngredientId() %>" class="btn btn-outline-primary">View</a>
       </td>
       <td>
-        <a href="updateingredients?ingredientId=<%= ibean.getIngredientId() %>" class="btn btn-outline-success">Update</a>
+<a href="updateingredients?ingredientId=<%= ibean.getIngredientId() %>" class="btn btn-outline-success">Update</a>
       </td>
       <td>
         <a href="deleteingredients?ingredientId=<%= ibean.getIngredientId() %>" class="btn btn-outline-danger btn-sm">Delete</a>
